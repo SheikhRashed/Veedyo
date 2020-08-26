@@ -308,7 +308,7 @@ section#service {
 
 @media (max-width: 575px) {
   section#service {
-    height: 150vh;
+    height: 180vh;
   }
 }
 
