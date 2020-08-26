@@ -37,13 +37,18 @@ html{
 
 .Btns{
     background-color: #B3519F;
-    padding: 8px 16px;
+    padding: 6px 20px;
     color: #fff;
     border-radius: 25px;
     transition: all 0.4s linear;
     text-transform: capitalize;
+    font-size: 14px;
+    line-height: 28px;
     &:hover{
         background-color: #000;
+    }
+    span{
+        font-weight: 600;
     }
 }
 textarea:focus, 
@@ -63,11 +68,13 @@ input[type=number]:focus,
 
 .form-control {
     border-radius: 0px !important;
+    border: none !important;
 }
 
 .section_title{
     h2{
         font-size: 48px;
+        line-height: 48px;
         color: #54595f;
         font-weight: 500;
         @media(max-width: 575px) {

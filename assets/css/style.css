@@ -31,16 +31,22 @@ html {
 
 .Btns {
   background-color: #B3519F;
-  padding: 8px 16px;
+  padding: 6px 20px;
   color: #fff;
   border-radius: 25px;
   -webkit-transition: all 0.4s linear;
   transition: all 0.4s linear;
   text-transform: capitalize;
+  font-size: 14px;
+  line-height: 28px;
 }
 
 .Btns:hover {
   background-color: #000;
+}
+
+.Btns span {
+  font-weight: 600;
 }
 
 textarea:focus,
@@ -61,10 +67,12 @@ input[type=number]:focus,
 
 .form-control {
   border-radius: 0px !important;
+  border: none !important;
 }
 
 .section_title h2 {
   font-size: 48px;
+  line-height: 48px;
   color: #54595f;
   font-weight: 500;
 }
@@ -133,7 +141,7 @@ header nav {
 }
 
 header nav .navbar-brand img {
-  width: 160px;
+  width: 180px;
 }
 
 header .bnnr_content {
@@ -147,12 +155,10 @@ header .bnnr_content .title {
   text-transform: capitalize;
   font-size: 35px;
   line-height: 48px;
-  font-weight: 600;
 }
 
 @media (max-width: 767px) {
   header .bnnr_content .title {
-    font-weight: 600;
     font-size: 26px;
     line-break: 36px;
   }
@@ -201,15 +207,15 @@ section#about .container .section_title {
   }
 }
 
-section#about .container p {
+section#about .container .txt {
   color: #fff;
   font-size: 15px;
   line-height: 27px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 @media (max-width: 380px) {
-  section#about .container p {
+  section#about .container .txt {
     font-size: 12px;
     line-height: 22px;
   }
@@ -323,9 +329,10 @@ section#service .container {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  section#service .container .service_content .section_title h2 {
-    font-size: 36px;
-    font-weight: 600;
+  section#service .container .service_content .section_title p {
+    font-size: 41px;
+    line-height: 53.3px;
+    font-weight: 400;
     color: #fff;
   }
   section#service .container .service_content .box-3 {
@@ -409,12 +416,64 @@ section#contact .bg-move {
   }
 }
 
+section#contact form {
+  padding: 26px 0px;
+}
+
 section#contact form .form-group input {
-  padding: 30px 15px;
+  padding: 30px 20px;
 }
 
 section#contact form .form-group input:active {
   outline: none !important;
+}
+
+section#contact form .form-group input::-webkit-input-placeholder {
+  font-size: 12px;
+  color: #54595f;
+}
+
+section#contact form .form-group input:-ms-input-placeholder {
+  font-size: 12px;
+  color: #54595f;
+}
+
+section#contact form .form-group input::-ms-input-placeholder {
+  font-size: 12px;
+  color: #54595f;
+}
+
+section#contact form .form-group input::placeholder {
+  font-size: 12px;
+  color: #54595f;
+}
+
+section#contact form .form-group textarea {
+  padding: 22px 20px;
+}
+
+section#contact form .form-group textarea::-webkit-input-placeholder {
+  font-size: 12px;
+  border: none !important;
+  color: #54595f;
+}
+
+section#contact form .form-group textarea:-ms-input-placeholder {
+  font-size: 12px;
+  border: none !important;
+  color: #54595f;
+}
+
+section#contact form .form-group textarea::-ms-input-placeholder {
+  font-size: 12px;
+  border: none !important;
+  color: #54595f;
+}
+
+section#contact form .form-group textarea::placeholder {
+  font-size: 12px;
+  border: none !important;
+  color: #54595f;
 }
 
 @media (max-width: 575px) {
