@@ -77,11 +77,20 @@ input[type=number]:focus,
         line-height: 48px;
         color: #54595f;
         font-weight: 500;
-        @media(max-width: 575px) {
+        @media(max-width: 767px) {
             font-size: 29px;
+            line-height: 29px;
         }
     }
     p{
         color: #54595f;
+        font-size: 16px;
+        line-height: 24px;
+        @media(max-width: 767px) {
+            font-size: 17px;
+            line-height: 25.5px;
+        }
     }
 }
+
+

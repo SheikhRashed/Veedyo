@@ -12,6 +12,9 @@ header {
     justify-content: center;
     height: 100vh;
     overflow: hidden;
+    @media(max-width: 767px) {
+        height: 60vh;
+    }
     &::after{
         content: '';
         position: absolute;
@@ -29,7 +32,9 @@ header {
             width: 100%;
             height: 100vh;
             object-fit: cover;
-          
+          @media(max-width: 767px) {
+              height: 60vh;
+          }
         }
     }
     nav{
@@ -57,14 +62,10 @@ header {
             color: #fff;
             text-transform: capitalize;
             font-size: 35px;
-            line-height: 48px;
+            line-height: 49px;
             @media(max-width: 767px) {
-                font-size: 26px;
-                line-break: 36px;
-            }
-            @media(max-width: 480px) {
-                font-size: 22px;
-                line-height: 32px;
+                font-size: 19px;
+                line-height: 26.6px;
             }
         }
     }
@@ -77,6 +78,10 @@ section{
     display: flex;
     align-items: center;
     margin: auto;
+    @media(max-width: 767px) {
+        min-height: 55vh;
+        padding: 60px 0px;
+    }
     &#about{
         background: url('../imges/bg/abt_bg.jpg') center center/cover no-repeat;
         @media(max-width: 575px) {
@@ -99,9 +104,9 @@ section{
                 font-size: 15px;
                 line-height: 27px;
                 font-weight: 400;
-                @media(max-width:380px) {
-                    font-size: 12px;
-                    line-height: 22px;
+                @media(max-width:767px) {
+                    font-size: 14px;
+                    line-height: 19.6px;
                 }
             }
         }
@@ -145,12 +150,8 @@ section{
                 color: #fff;
                 line-height: 67.5px;
                 @media(max-width: 767px) {
-                    font-size: 32px;
-                    line-height: 42px;
-                }
-                @media(max-width: 380px) {
-                    font-size: 26px;
-                    line-height: 36px;
+                    font-size: 25px;
+                    line-height: 27.5px;
                 }
             }
         }
@@ -162,10 +163,10 @@ section{
         background: url('../imges/bg/service_bg.jpg') center center/cover no-repeat;
         overflow: hidden;
         @media(max-width: 767px) {
-            height: 150vh;
+            height: 100vh;
         }
         @media(max-width: 575px) {
-            height: 220vh;
+            height: 120vh;
         }
         &::after{
             content: '';
@@ -235,9 +236,9 @@ section{
                             line-height:28.8px ;
                         }
                         .text{
-                            font-size: 13px;
-                            line-height: 23.4px;
-    
+                            font-size: 13px !important;
+                            line-height: 23.4px !important;
+                               
                         }
                     }
                 }
@@ -279,17 +280,6 @@ section{
                 left: 0px !important;
             }
         }
-        @media (max-width: 991px) {
-            // background-position: inherit;
-        }
-        @media (max-width: 768px) {
-            // background-size: 215%;
-            // background-position: top;
-        }
-        @media (max-width: 575px) {
-            // background-size: cover;
-            // background-position: -195px 0px;
-        }
 
 
         form{
@@ -315,7 +305,7 @@ section{
                     color: #54595f;
                 }
                 .Btns{
-                    @media(max-width: 575px) {
+                    @media(max-width: 767px) {
                         width: 100%;
                     }
                 }
@@ -325,19 +315,6 @@ section{
 }
 
 
-
-// Responsive 
-// @media(max-width: 991px) {
-
-//     .service_content{
-//         grid-template-columns: repeat(4,1fr);
-//         grid-template-areas: 
-//         "box_1 box-1 box_2 box_2"
-//         "box_3 box-3 box_4 box_4";
-
-//     }
-   
-// }
 
 @media(max-width: 991px) {
     #service{
@@ -371,11 +348,56 @@ section{
                 }
                 .title{
                     font-weight: 600;
-                    font-size: 26px;
+                    font-size: 24px;
+                    line-height:28.8px;
                 }
                 .text{
-                    font-size: 16px;
-                    line-height: 26px;
+                    font-size: 13px;
+                    line-height: 23.4px;
+
+                }
+            }
+        }
+       }
+    }
+}
+@media(max-width: 767px) {
+    #service{
+      
+       .container {
+
+        .service_content{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+            gap: 20px;
+            text-align: center;
+            .section_title{
+                display: none;
+            }
+
+                
+            .box{
+                text-align: center;
+
+                .icon{
+                    border: 2px solid #fff;
+                    padding: 10px;
+                    width: 15%;
+                    padding: 20px 0px;
+                    margin: auto;
+                    margin-bottom: 15px;
+                    transition: all .2s linear;
+                    &:hover{
+                        transform: scale(1.1);
+                    }
+                }
+                .title{
+                    line-height:0px;
+                    padding: 18px 0px;
+                }
+                .text{
+                    font-size: 12px;
+                    line-height: 18px;
 
                 }
             }
