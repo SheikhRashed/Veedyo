@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    &:hover{
+        @extend a;
+    }
+    &:focus{
+        @extend a;
+    }
+
+}
+
+button{
+    border: none;
+    outline: none;
+    &:hover{
+        @extend button;
+    }
+}
+// .container{
+//     @media(min-width:1600px) {
+//         max-width: 1440px;
+//     }
+// }
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+.Btns{
+    background-color: #B3519F;
+    padding: 8px 16px;
+    color: #fff;
+    border-radius: 25px;
+    transition: all 0.4s linear;
+    text-transform: capitalize;
+    &:hover{
+        background-color: #000;
+    }
+}
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: inset 0 -1px 0 transparent;
+}
