@@ -45,7 +45,7 @@ header {
         }
         .navbar-brand{
             img{
-                width: 180px;
+                width: 160px;
             }
         }
     }
@@ -74,10 +74,11 @@ header {
 }
 
 section{
-    height: 100vh;
+    position: relative;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-   
+    margin: auto;
     &#about{
         background: url('../imges/bg/abt_bg.jpg') center center/cover no-repeat;
         @media(max-width: 575px) {
@@ -86,8 +87,8 @@ section{
         .container{
 
             .section_title{
-                font-size: 48px;
-                line-height: 80px;
+                font-size: 45px;
+                line-height: 45px;
                 color: #fff;
                 font-weight: 600;
                 @media(max-width: 380px) {
@@ -97,8 +98,8 @@ section{
             }
             p{
                 color: #fff;
-                font-size: 16px;
-                line-height: 36px;
+                font-size: 15px;
+                line-height: 27px;
                 font-weight: 600;
                 @media(max-width:380px) {
                     font-size: 12px;
@@ -109,23 +110,38 @@ section{
        
     }
     &#customer{
-        background: url('../imges/bg/customer_bg.jpg') center center/cover no-repeat;
-        // // background-size: cover;
+        background: #FE92CC;
+        background: -webkit-linear-gradient(bottom, #FE92CC, #F768AD);
+        background: -moz-linear-gradient(bottom, #FE92CC, #F768AD);
+        background: linear-gradient(to top, #FE92CC, #F768AD);
+        background-size: cover;
+        background-position: center;
+
+
         @media(max-width: 575px) {
-            background-position: -525px 0px;
+            // background-position: -525px 0px;
         }
         @media(max-width: 480px) {
-            background-position: -360px 0px;
+            // background-position: -360px 0px;
         }
         @media(max-width: 360px) {
-            background-position: -525px 0px;
+            // background-position: -525px 0px;
+        }
+        .bg-move{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+           left: auto;
+            width: 100%;
+            background: url('../imges/bg_1.png') no-repeat;
+            background-size: cover;
+            background-position: center;
         }
         .container{
             h2{
                 font-size: 45px;
                 color: #fff;
-                font-weight: 600;
-                line-height: 58px;
+                line-height: 67.5px;
                 @media(max-width: 767px) {
                     font-size: 32px;
                     line-height: 42px;
@@ -156,7 +172,7 @@ section{
             position: absolute;
             top: 0;
             left: 0;
-            background-color: rgba(0, 0, 0, 0.541);
+            background-color: rgba(0, 0, 0, 0.37);
             z-index: 1;
         }
         .container{
@@ -183,6 +199,7 @@ section{
                         h2{
                             font-size: 36px;
                             font-weight: 600;
+                            color: #fff;
                         }
                     }
                     .box-3{
@@ -196,12 +213,14 @@ section{
                         text-align: center;
     
                         .icon{
+                             display: flex;
+                             align-items: center;
+                             justify-content: center;
+                             width: 45px;
+                             height: 45px;
+                             margin: auto;
+                             margin-bottom: 16px;
                             border: 2px solid #fff;
-                            padding: 10px;
-                            width: 15%;
-                            padding: 20px 0px;
-                            margin: auto;
-                            margin-bottom: 15px;
                             transition: all .2s linear;
                             &:hover{
                                 transform: scale(1.1);
@@ -209,11 +228,12 @@ section{
                         }
                         .title{
                             font-weight: 600;
-                            font-size: 26px;
+                            font-size: 24px;
+                            line-height:28.8px ;
                         }
                         .text{
-                            font-size: 16px;
-                            line-height: 26px;
+                            font-size: 13px;
+                            line-height: 23.4px;
     
                         }
                     }
@@ -225,43 +245,58 @@ section{
     &#clients{
       
        .container{
-           .section_title{
-               h2{
-                   font-size: 48px;
-                   color: #54595f;
-                   font-weight: 500;
-               }
-           }
            .client_slider{
                padding: 60px 0px;
                img{
-                   width: 180px;
-                   height: 90px;
+                   min-width: 55px;
+                   height: 55px;
                    margin: auto;
                }
            }
        }
     }
     &#contact{
-        background: url('../imges/bg/contact_bg.jpg') center center/cover no-repeat;
+        background: #F9B5B6;
+        background: -webkit-linear-gradient(top, #F9B5B6, #FBABA9);
+        background: -moz-linear-gradient(top, #F9B5B6, #FBABA9);
+        background: linear-gradient(to bottom, #F9B5B6, #FBABA9);
+        background-size: cover;
+        background-position: center;
+
+        .bg-move{
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background: url('../imges/bg_2.png') no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
         @media (max-width: 991px) {
-            background-position: inherit;
+            // background-position: inherit;
         }
-        .section_title{
-            h2{
-                font-size: 48px;
-                color: #54595f;
-                font-weight: 500;
-            }
+        @media (max-width: 768px) {
+            // background-size: 215%;
+            // background-position: top;
         }
+        @media (max-width: 575px) {
+            // background-size: cover;
+            // background-position: -195px 0px;
+        }
+
 
         form{
             .form-group {
                 input{
                     padding: 30px 15px;
-
-                    &:focus{
+                    &:active{
                         outline: none !important;
+                    }
+                }
+                .Btns{
+                    @media(max-width: 575px) {
+                        width: 100%;
                     }
                 }
             }

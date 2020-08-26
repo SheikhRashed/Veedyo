@@ -1,18 +1,22 @@
 // @ts-nocheck
-// window.addEventListener("scroll", () =>{
-//     let pageY = window.pageYOffset;
-//     let customer = document.querySelector("#customer");
-//     console.log( customer.style.backgroundPosition = `-${pageY}px - 800px`);
-//     console.log(customer);
-// });
 
-// var rellax = new Rellax('.rellax',{
-//     horizontal:true,
+// One type
 
-//     //Disable vertical Parallax Scrolling     
-//     vertical:false
-// });
+$(window).on("load resize scroll", function() {
+  $(".bg-static").each(function() {
+    var windowTop = $(window).scrollTop();
+    var elementTop = $(this).offset().top;
+    var leftPosition = windowTop - elementTop;
+    console.log(leftPosition);
+      $(this)
+        .find(".bg-move")
+        .css({ left: leftPosition});
+  });
+});
 
+// another way
+// var bg = document.getElementsByClassName('bg-static');
+// var parallaxInstance = new Parallax(bg);
 
 $(document).ready(function(){
     $('.client_slider').slick({
@@ -20,7 +24,7 @@ $(document).ready(function(){
     autoplaySpeed: 1200,
     dots:false,
     arrows:false,
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     responsive: [
         {

@@ -59,6 +59,26 @@ input[type=number]:focus,
           box-shadow: inset 0 -1px 0 transparent;
 }
 
+.form-control {
+  border-radius: 0px !important;
+}
+
+.section_title h2 {
+  font-size: 48px;
+  color: #54595f;
+  font-weight: 500;
+}
+
+@media (max-width: 575px) {
+  .section_title h2 {
+    font-size: 29px;
+  }
+}
+
+.section_title p {
+  color: #54595f;
+}
+
 header {
   position: relative;
   display: -webkit-box;
@@ -113,7 +133,7 @@ header nav {
 }
 
 header nav .navbar-brand img {
-  width: 180px;
+  width: 160px;
 }
 
 header .bnnr_content {
@@ -146,13 +166,15 @@ header .bnnr_content .title {
 }
 
 section {
-  height: 100vh;
+  position: relative;
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: auto;
 }
 
 section#about {
@@ -166,8 +188,8 @@ section#about {
 }
 
 section#about .container .section_title {
-  font-size: 48px;
-  line-height: 80px;
+  font-size: 45px;
+  line-height: 45px;
   color: #fff;
   font-weight: 600;
 }
@@ -181,8 +203,8 @@ section#about .container .section_title {
 
 section#about .container p {
   color: #fff;
-  font-size: 16px;
-  line-height: 36px;
+  font-size: 15px;
+  line-height: 27px;
   font-weight: 600;
 }
 
@@ -194,32 +216,28 @@ section#about .container p {
 }
 
 section#customer {
-  background: url("../imges/bg/customer_bg.jpg") center center/cover no-repeat;
+  background: #FE92CC;
+  background: -webkit-gradient(linear, left bottom, left top, from(#FE92CC), to(#F768AD));
+  background: linear-gradient(to top, #FE92CC, #F768AD);
+  background-size: cover;
+  background-position: center;
 }
 
-@media (max-width: 575px) {
-  section#customer {
-    background-position: -525px 0px;
-  }
-}
-
-@media (max-width: 480px) {
-  section#customer {
-    background-position: -360px 0px;
-  }
-}
-
-@media (max-width: 360px) {
-  section#customer {
-    background-position: -525px 0px;
-  }
+section#customer .bg-move {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+  background: url("../imges/bg_1.png") no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 section#customer .container h2 {
   font-size: 45px;
   color: #fff;
-  font-weight: 600;
-  line-height: 58px;
+  line-height: 67.5px;
 }
 
 @media (max-width: 767px) {
@@ -261,7 +279,7 @@ section#service::after {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.541);
+  background-color: rgba(0, 0, 0, 0.37);
   z-index: 1;
 }
 
@@ -301,6 +319,7 @@ section#service .container {
   section#service .container .service_content .section_title h2 {
     font-size: 36px;
     font-weight: 600;
+    color: #fff;
   }
   section#service .container .service_content .box-3 {
     -ms-grid-row: 2;
@@ -316,12 +335,20 @@ section#service .container {
     text-align: center;
   }
   section#service .container .service_content .box .icon {
-    border: 2px solid #fff;
-    padding: 10px;
-    width: 15%;
-    padding: 20px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 45px;
+    height: 45px;
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
+    border: 2px solid #fff;
     -webkit-transition: all .2s linear;
     transition: all .2s linear;
   }
@@ -331,18 +358,13 @@ section#service .container {
   }
   section#service .container .service_content .box .title {
     font-weight: 600;
-    font-size: 26px;
+    font-size: 24px;
+    line-height: 28.8px;
   }
   section#service .container .service_content .box .text {
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 13px;
+    line-height: 23.4px;
   }
-}
-
-section#clients .container .section_title h2 {
-  font-size: 48px;
-  color: #54595f;
-  font-weight: 500;
 }
 
 section#clients .container .client_slider {
@@ -350,33 +372,41 @@ section#clients .container .client_slider {
 }
 
 section#clients .container .client_slider img {
-  width: 180px;
-  height: 90px;
+  min-width: 55px;
+  height: 55px;
   margin: auto;
 }
 
 section#contact {
-  background: url("../imges/bg/contact_bg.jpg") center center/cover no-repeat;
+  background: #F9B5B6;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F9B5B6), to(#FBABA9));
+  background: linear-gradient(to bottom, #F9B5B6, #FBABA9);
+  background-size: cover;
+  background-position: center;
 }
 
-@media (max-width: 991px) {
-  section#contact {
-    background-position: inherit;
-  }
-}
-
-section#contact .section_title h2 {
-  font-size: 48px;
-  color: #54595f;
-  font-weight: 500;
+section#contact .bg-move {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: url("../imges/bg_2.png") no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 section#contact form .form-group input {
   padding: 30px 15px;
 }
 
-section#contact form .form-group input:focus {
+section#contact form .form-group input:active {
   outline: none !important;
+}
+
+@media (max-width: 575px) {
+  section#contact form .form-group .Btns {
+    width: 100%;
+  }
 }
 
 @media (max-width: 991px) {

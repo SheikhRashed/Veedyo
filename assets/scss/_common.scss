@@ -26,11 +26,6 @@ button{
         @extend button;
     }
 }
-// .container{
-//     @media(min-width:1600px) {
-//         max-width: 1440px;
-//     }
-// }
 body{
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
@@ -64,4 +59,22 @@ input[type=number]:focus,
 [type=tel].form-control:focus, 
 [contenteditable].form-control:focus {
   box-shadow: inset 0 -1px 0 transparent;
+}
+
+.form-control {
+    border-radius: 0px !important;
+}
+
+.section_title{
+    h2{
+        font-size: 48px;
+        color: #54595f;
+        font-weight: 500;
+        @media(max-width: 575px) {
+            font-size: 29px;
+        }
+    }
+    p{
+        color: #54595f;
+    }
 }
