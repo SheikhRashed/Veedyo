@@ -234,6 +234,13 @@ section#customer .bg-move {
   background-position: center;
 }
 
+@media (max-width: 768px) {
+  section#customer .bg-move {
+    background-size: 120%;
+    background-position: bottom;
+  }
+}
+
 section#customer .container h2 {
   font-size: 45px;
   color: #fff;
@@ -393,6 +400,13 @@ section#contact .bg-move {
   background: url("../imges/bg_2.png") no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+@media (max-width: 768px) {
+  section#contact .bg-move {
+    background: url("../imges/bg_2_md.png") no-repeat;
+    left: 0px !important;
+  }
 }
 
 section#contact form .form-group input {

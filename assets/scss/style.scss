@@ -136,6 +136,10 @@ section{
             background: url('../imges/bg_1.png') no-repeat;
             background-size: cover;
             background-position: center;
+            @media(max-width: 768px) {
+                background-size: 120%;
+                background-position: bottom;
+            }
         }
         .container{
             h2{
@@ -271,7 +275,10 @@ section{
             background: url('../imges/bg_2.png') no-repeat;
             background-size: cover;
             background-position: center;
-
+            @media (max-width: 768px) {
+                background: url('../imges/bg_2_md.png') no-repeat;
+                left: 0px !important;
+            }
         }
         @media (max-width: 991px) {
             // background-position: inherit;
